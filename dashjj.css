@@ -2,26 +2,32 @@ body {
     width: 80%;
     margin: 60px auto;
     font-family: helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 48px;
 }
 
-.muni-inbound {
+.line-display {
     margin-top: 20px;
 }
 
 .muni-circle {
     display: inline-block;
     width: 50px;
-    border-radius: 25px;
+    border-radius: 28px;
     text-align: center;
-    font-size: 25px;
-    padding: 10px 0;
+    font-size: 35px;
+    padding: 5px 0;
     font-weight: bold;
+    border: 3px solid black;
+}
+
+.line-name {
+    font-weight: bold;
+    letter-spacing: -1.5px;
 }
 
 .CircleJ {
     background-color: #FAA724;
-    color: black;
+    color: white;
 }
 .CircleK {
     background-color: #529BC0;
