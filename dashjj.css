@@ -1,0 +1,64 @@
+body {
+    width: 80%;
+    margin: 60px auto;
+    font-family: helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.muni-inbound {
+    margin-top: 20px;
+}
+
+.muni-circle {
+    display: inline-block;
+    width: 50px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.CircleJ {
+    background-color: #FAA724;
+    color: black;
+}
+.CircleK {
+    background-color: #529BC0;
+    color: white;
+}
+.CircleL {
+    background-color: #932091;
+    color: white;
+}
+.CircleM {
+    background-color: #008850;
+    color: white;
+}
+.CircleN {
+    background-color: #00509C;
+    color: white;
+}
+.CircleT {
+    background-color: #D50942;
+    color: white;
+}
+
+.MuniJ {
+    color: #FAA724;
+}
+.MuniK {
+    color: #529BC0;
+}
+.MuniL {
+    color: #932091;
+}
+.MuniM {
+    color: #008850;
+}
+.MuniN {
+    color: #00509C;
+}
+.MuniT {
+    color: #D50942;
+}
