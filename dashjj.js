@@ -1,4 +1,4 @@
-var muniDataSrc = "data.json"
+var muniDataSrc = "http://jsonp.jit.su/?url=http%3A%2F%2Fjj-muni.aws.af.cm%2F"
 
 var muniColorClasses = {
     'KT': 'MuniK',
