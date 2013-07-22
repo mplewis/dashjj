@@ -50,10 +50,33 @@ $.getJSON(muniDataSrc, function(data) {
     for (var i = 0; i < inboundSubwayConciseStops.length; i++) {
         stop = inboundSubwayConciseStops[i];
         colorClass = muniColorClasses[stop.line];
-        $('<span>').addClass(colorClass).text(stop.time).appendTo('.inbound-subway');
+        console.log(stop.time);
+        if (stop.time == 0) {
+            timeText = "now";
+        } else {
+            timeText = stop.time;
+        }
+        $('<span>').addClass(colorClass).text(timeText).appendTo('.inbound-subway');
         if (i != inboundSubwayConciseStops.length - 1) {
             $('.inbound-subway').append(', ');
         }
     }
-    
+
+    // write other subway stops programatically
+    console.log(otherStops);
+    for (var i = 0; i < otherStops.length; i++) {
+        stop = otherStops[i];
+        lineName = stop.desc;
+        lineTimes = stop.possible_departure_times;
+        if (lineTimes[0] == 0) {
+            lineTimes[0] = "now";
+        }
+        var container = $('<div>').addClass('line-display');
+        $('<div>').addClass('line-name').text(lineName + ':').appendTo(container);
+        var times = lineTimes.join(', ');
+        $('<div>').addClass('line-data').text(times).appendTo(container);
+        $('.muni-lines').append(container);
+    }
+
+    $('.muni-lines').fadeIn();
 });
