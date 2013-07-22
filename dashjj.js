@@ -6,6 +6,8 @@ var muniColorClasses = {
     'M':  'MuniM'
 };
 
+var noArrivalsText = 'no upcoming arrivals';
+
 function isInboundMuni(stopData) {
     return (stopData.direction == "inbound" &&
             (stopData.route_id == "KT" ||
@@ -47,18 +49,23 @@ $.getJSON(muniDataSrc, function(data) {
         }
     });
     var out = "";
-    for (var i = 0; i < inboundSubwayConciseStops.length; i++) {
-        stop = inboundSubwayConciseStops[i];
-        colorClass = muniColorClasses[stop.line];
-        console.log(stop.time);
-        if (stop.time == 0) {
-            timeText = "now";
-        } else {
-            timeText = stop.time;
-        }
-        $('<span>').addClass(colorClass).text(timeText).appendTo('.inbound-subway');
-        if (i != inboundSubwayConciseStops.length - 1) {
-            $('.inbound-subway').append(', ');
+    if (inboundSubwayConciseStops.length == 0) {
+        var divOut = $('<div>').addClass('inactive-line').text(noArrivalsText);
+        $('.inbound-subway').append(divOut);
+    } else {
+        for (var i = 0; i < inboundSubwayConciseStops.length; i++) {
+            stop = inboundSubwayConciseStops[i];
+            colorClass = muniColorClasses[stop.line];
+            console.log(stop.time);
+            if (stop.time == 0) {
+                timeText = "now";
+            } else {
+                timeText = stop.time;
+            }
+            $('<span>').addClass(colorClass).text(timeText).appendTo('.inbound-subway');
+            if (i != inboundSubwayConciseStops.length - 1) {
+                $('.inbound-subway').append(', ');
+            }
         }
     }
 
@@ -73,8 +80,18 @@ $.getJSON(muniDataSrc, function(data) {
         }
         var container = $('<div>').addClass('line-display');
         $('<div>').addClass('line-name').text(lineName + ':').appendTo(container);
-        var times = lineTimes.join(', ');
-        $('<div>').addClass('line-data').text(times).appendTo(container);
+        var times;
+        var noArrivals = false;
+        if (lineTimes.length == 0) {
+            times = noArrivalsText
+            noArrivals = true;
+        } else {
+            times = lineTimes.join(', ');
+        }
+        lineData = $('<div>').addClass('line-data').text(times).appendTo(container);
+        if (noArrivals) {
+            lineData.addClass('inactive-line');
+        }
         $('.muni-lines').append(container);
     }
 

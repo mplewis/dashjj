@@ -9,6 +9,10 @@ body {
     margin-top: 20px;
 }
 
+.inactive-line {
+    color: #888;
+}
+
 .muni-circle {
     display: inline-block;
     width: 50px;
