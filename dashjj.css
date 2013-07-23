@@ -17,20 +17,22 @@ body {
 
 .muni-marker {
     display: inline-block;
-    width: 50px;
     text-align: center;
     font-size: 35px;
-    padding: 5px 0;
     font-weight: bold;
     border: 3px solid black;
 }
 
 .muni-rect {
     border-radius: 6px;
+    padding: 2px 0;
+    width: 47px;
 }
 
 .muni-circle {
     border-radius: 28px;
+    padding: 5px 0;
+    width: 50px;
 }
 
 .line-name {
