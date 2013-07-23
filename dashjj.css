@@ -15,6 +15,16 @@ body {
     color: #888;
 }
 
+.muni-legend {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #888;
+}
+
+.station-name {
+    font-weight: bold;
+    font-size: 35px;
+}
+
 .muni-marker {
     display: inline-block;
     text-align: center;
