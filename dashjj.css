@@ -15,15 +15,22 @@ body {
     color: #888;
 }
 
-.muni-circle {
+.muni-marker {
     display: inline-block;
     width: 50px;
-    border-radius: 28px;
     text-align: center;
     font-size: 35px;
     padding: 5px 0;
     font-weight: bold;
     border: 3px solid black;
+}
+
+.muni-rect {
+    border-radius: 6px;
+}
+
+.muni-circle {
+    border-radius: 28px;
 }
 
 .line-name {
@@ -34,6 +41,14 @@ body {
 
 .line-data {
     font-weight:bold;
+}
+
+.RectBus {
+    background-color: #555;
+}
+
+.RectF {
+    background-color: #d35400;
 }
 
 .CircleJ {
