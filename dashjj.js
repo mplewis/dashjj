@@ -24,6 +24,15 @@ function isMetro(stopData) {
             stopData.route_id == "N");
 }
 
+function getRouteIdAndFixKT(stopData) {
+    if (stopData.route_id == "KT") {
+        if (isInbound(stopData)) {
+            return "T";
+	} else {
+            return "K";
+	}
+    }
+    return stopData.route_id;
 }
 
 $.getJSON(muniDataSrc, function(data) {
@@ -47,7 +56,7 @@ $.getJSON(muniDataSrc, function(data) {
         var stop = inboundSubwayStops[i];
         for (var j = 0; j < stop.possible_departure_times.length; j++) {
             var time = stop.possible_departure_times[j];
-            inboundSubwayConciseStops.push({"line": stop.route_id, "time": time});
+            inboundSubwayConciseStops.push({"line": getRouteIdAndFixKT(stop), "time": time});
         }
     }
     inboundSubwayConciseStops.sort(function(a, b) {
