@@ -12,11 +12,18 @@ var muniColorClasses = {
 
 var noArrivalsText = 'no upcoming arrivals';
 
-function isInboundMuni(stopData) {
-    return (stopData.direction == "inbound" &&
-            (stopData.route_id == "KT" ||
-             stopData.route_id == "L"  ||
-             stopData.route_id == "M"));
+function isInbound(stopData) {
+    return (stopData.direction == "inbound");
+}
+
+function isMetro(stopData) {
+    return (stopData.route_id == "J"  ||
+            stopData.route_id == "KT" ||
+            stopData.route_id == "L"  ||
+            stopData.route_id == "M"  ||
+            stopData.route_id == "N");
+}
+
 }
 
 $.getJSON(muniDataSrc, function(data) {
@@ -27,7 +34,7 @@ $.getJSON(muniDataSrc, function(data) {
     // sort stops into inbound subway stops and non-(inbound subway) stops
     for (var i = 0; i < stops.length; i++) {
         var stop = stops[i];
-        if (isInboundMuni(stop)) {
+        if (isInbound(stop) && isMetro(stop)) {
             inboundSubwayStops.push(stop);
         } else {
             otherStops.push(stop);
