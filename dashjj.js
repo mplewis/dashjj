@@ -1,9 +1,13 @@
 var muniDataSrc = "http://jsonp.jit.su/?url=http%3A%2F%2Fjj-muni.aws.af.cm%2F"
 
 var muniColorClasses = {
+    'J':  'MuniJ',
     'KT': 'MuniK',
+    'K':  'MuniK',
     'L':  'MuniL',
-    'M':  'MuniM'
+    'M':  'MuniM',
+    'N':  'MuniN',
+    'T':  'MuniT'
 };
 
 var noArrivalsText = 'no upcoming arrivals';
