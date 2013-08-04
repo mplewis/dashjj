@@ -52,6 +52,7 @@ body {
 .muni-rect {
     border-radius: 6px;
     padding: 3px 0;
+    margin: 4px 0;
 }
 
 .muni-circle {
