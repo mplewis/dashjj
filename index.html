@@ -9,17 +9,45 @@
 <body>
     <div class="muni-legend">
         <span class="station-name">Castro Station</span>
-        <span class="CircleK muni-marker muni-circle">K</span>
-        <span class="CircleL muni-marker muni-circle">L</span>
-        <span class="CircleM muni-marker muni-circle">M</span>
-        <span class="CircleT muni-marker muni-circle">T</span>
-        <span class="RectBus muni-marker muni-rect">33</span>
-        <span class="RectF muni-marker muni-rect">F</span>
     </div>
     <div class="muni-lines" style="display: none;">
         <div class="line-display">
-            <div class="line-name">Muni Inbound:</div>
+            <div class="line-name">
+	        <span class="muni-marker-container muni-circle-container">
+                    <div class="CircleL muni-marker muni-circle">L</div>
+		    <div class="muni-marker-caption">Taraval</div>
+	        </span>
+	        <span class="muni-marker-container muni-circle-container">
+                    <div class="CircleM muni-marker muni-circle">M</div>
+		    <div class="muni-marker-caption">Ocean View</div>
+	        </span>
+		<span class="line-desc">
+		    Inbound <span class="to">to</span> Embarcadero
+		</span>
+            </div>
+            <div class="line-name">
+	        <span class="muni-marker-container muni-circle-container">
+                    <div class="CircleT muni-marker muni-circle">T</div>
+		    <div class="muni-marker-caption">Third Street</div>
+	        </span>
+		<span class="line-desc">
+                    Inbound <span class="to">to</span> Embarcadero / Sunnydale
+		</span>
+            </div>
             <div class="line-data inbound-subway"></div>
+	    <br /> <br />
+	    <span class="muni-marker-container muni-circle-container">
+		<div class="CircleK muni-marker muni-circle">K</div>
+		<div class="muni-marker-caption">Ingleside</div>
+	    </span>
+	    <span class="muni-marker-container muni-rect-container">
+                <div class="RectBus muni-marker muni-rect">33</div>
+		<div class="muni-marker-caption">Stanyan</div>
+	    </span>
+	    <span class="muni-marker-container muni-rect-container">
+                <div class="RectF muni-marker muni-rect">F</div>
+		<div class="muni-marker-caption">Market &amp; Wharves</div>
+	    </span>
         </div>
     </div>
     <script src="dashjj.js"></script>
