@@ -3,7 +3,7 @@ body {
     margin: 60px auto;
     font-family: helvetica, sans-serif;
     font-size: 48px;
-    background-color: #232323;
+    background-color: #181818;
     color: #ddd;
 }
 
@@ -16,7 +16,6 @@ body {
 }
 
 .muni-legend {
-    padding-bottom: 6px;
     border-bottom: 3px solid #888;
 }
 
@@ -25,30 +24,53 @@ body {
     font-size: 35px;
 }
 
-.muni-marker {
+.muni-marker-container {
     display: inline-block;
     text-align: center;
-    font-size: 35px;
     font-weight: bold;
-    border: 3px solid black;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.muni-rect-container {
+    width: 46px;
+}
+
+.muni-circle-container {
+    width: 50px;
+}
+
+.muni-marker {
+    font-size: 35px;
+    margin-bottom: 2px;
+}
+
+.muni-marker-caption {
+    font-size: 10px;
 }
 
 .muni-rect {
     border-radius: 6px;
-    padding: 2px 0;
-    width: 44px;
+    padding: 3px 0;
 }
 
 .muni-circle {
     border-radius: 28px;
     padding: 5px 0;
-    width: 50px;
 }
 
 .line-name {
     font-weight: bold;
     font-size: 28px;
     letter-spacing: -1.5px;
+    margin-bottom: 8px;
+}
+
+.line-desc {
+}
+
+.to {
+    color: #888;
 }
 
 .line-data {
@@ -65,27 +87,21 @@ body {
 
 .CircleJ {
     background-color: #FAA724;
-    color: white;
 }
 .CircleK {
     background-color: #529BC0;
-    color: white;
 }
 .CircleL {
     background-color: #932091;
-    color: white;
 }
 .CircleM {
     background-color: #008850;
-    color: white;
 }
 .CircleN {
     background-color: #00509C;
-    color: white;
 }
 .CircleT {
     background-color: #D50942;
-    color: white;
 }
 
 .MuniJ {
