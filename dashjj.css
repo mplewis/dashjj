@@ -8,7 +8,13 @@ body {
 }
 
 .line-display {
-    margin-top: 20px;
+    margin: 20px 0 8px 0;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: -1.5px;
+    display: inline-block;
+    width: 49.48%;
+    vertical-align: top;
 }
 
 .inactive-line {
@@ -30,6 +36,7 @@ body {
     font-weight: bold;
     color: white;
     margin-bottom: 2px;
+    vertical-align: top;
 }
 
 .muni-rect-container {
@@ -46,7 +53,17 @@ body {
 }
 
 .muni-marker-caption {
+    float: left;
+    top: 10px;
     font-size: 10px;
+}
+
+.muni-rect-caption {
+    width: 46px;
+}
+
+.muni-circle-caption {
+    width: 50px;
 }
 
 .muni-rect {
@@ -60,22 +77,22 @@ body {
     padding: 5px 0;
 }
 
-.line-name {
-    font-weight: bold;
-    font-size: 28px;
-    letter-spacing: -1.5px;
-    margin-bottom: 8px;
-}
-
 .line-desc {
+    display: inline-block;
+    width: 70%;
+    margin-top: 12px;
+    text-align: right;
+    float: right;
 }
 
 .to {
-    color: #888;
+    color: #444;
+    text-shadow: 0 0 5px #111;
 }
 
 .line-data {
     font-weight:bold;
+    font-size:35px;
 }
 
 .RectBus {
