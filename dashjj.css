@@ -1,5 +1,5 @@
 body {
-    width: 80%;
+    width: 1200px;
     margin: 60px auto;
     font-family: helvetica, sans-serif;
     font-size: 48px;
@@ -8,12 +8,12 @@ body {
 }
 
 .line-display {
-    margin: 20px 0 8px 0;
+    margin: 20px;
     font-weight: bold;
     font-size: 28px;
     letter-spacing: -1.5px;
     display: inline-block;
-    width: 49.48%;
+    width: 558px;
     vertical-align: top;
 }
 
@@ -52,7 +52,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: white;
-    margin-bottom: 2px;
+    margin-bottom: 16px;
     vertical-align: top;
 }
 
@@ -96,8 +96,7 @@ body {
 
 .line-desc {
     display: inline-block;
-    width: 70%;
-    margin-top: 12px;
+    margin: 12px 0 0 0;
     text-align: right;
     float: right;
 }
@@ -108,6 +107,7 @@ body {
 }
 
 .line-data {
+    width: 200px;
     font-weight:bold;
     font-size:35px;
 }
